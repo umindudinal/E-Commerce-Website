@@ -1,54 +1,106 @@
 .news_letter {
    width: 80%;
-   height: 40vh;
+   height: auto;
+   min-height: 40vh;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
    margin: auto;
-   padding: 0 100px;
-   margin-bottom: 150px;
+   padding: 60px 40px;
+   margin-bottom: 100px;
    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
-   gap: 30px;
+   gap: 20px;
    text-transform: capitalize;
+   border-radius: 20px;
 }
 .news_letter h1 {
    font-size: 40px;
    font-weight: 600;
+   text-align: center;
+   line-height: 1.2;
 }
 .news_letter p {
    color: #333;
    font-size: 20px;
+   text-align: center;
 }
 .news_letter .email {
    display: flex;
    align-items: center;
    justify-content: space-between;
    background: #fff;
-   width: 600px;
+   width: 100%;
+   max-width: 600px;
    height: 60px;
    border-radius: 50px;
    border: 1px solid #ccc;
-   gap: 20px;
+   gap: 10px;
 }
 .news_letter .email input {
-   width: 80%;
+   width: 70%;
    height: 100%;
    border: none;
    border-radius: 50px;
    padding-left: 20px;
-   font-size: 18px;
+   font-size: 16px;
    outline: none;
 }
 .news_letter .email button {
-   width: 200px;
+   width: 180px;
    height: 50px;
    border: none;
    border-radius: 50px;
    background-color: #eb423f;
    color: #fff;
-   font-size: 18px;
+   font-size: 16px;
    font-weight: 600;
    cursor: pointer;
    margin-right: 5px;
+   transition: all 0.3s ease;
+}
+.news_letter .email button:hover {
+   background-color: #d63633;
+}
+
+@media (max-width: 1024px) {
+   .news_letter {
+      width: 90%;
+      padding: 50px 30px;
+   }
+   .news_letter h1 {
+      font-size: 32px;
+   }
+   .news_letter p {
+      font-size: 16px;
+   }
+}
+
+@media (max-width: 550px) {
+   .news_letter {
+      margin-bottom: 60px;
+   }
+   .news_letter h1 {
+      font-size: 24px;
+   }
+   .news_letter .email {
+      flex-direction: column;
+      height: auto;
+      background: transparent;
+      border: none;
+      gap: 15px;
+   }
+   .news_letter .email input {
+      width: 100%;
+      height: 50px;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      padding-left: 20px;
+      background: #fff;
+   }
+   .news_letter .email button {
+      width: 100%;
+      height: 50px;
+      margin-right: 0;
+   }
 }
