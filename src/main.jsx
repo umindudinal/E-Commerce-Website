@@ -7,7 +7,7 @@ import ShopContextProvider from './Context/ShopContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/e-commerce-website">
+    <BrowserRouter>
       <ShopContextProvider>
         <App />
       </ShopContextProvider>

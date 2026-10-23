@@ -1,0 +1,245 @@
+.description_box_container {
+  max-width: 1280px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+}
+
+.desc_tabs_header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 2px solid var(--border-subtle);
+  overflow-x: auto;
+}
+
+.desc_tab_btn {
+  padding: 14px 24px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.desc_tab_btn:hover {
+  color: var(--text-main);
+}
+
+.desc_tab_btn.active {
+  color: var(--primary);
+}
+
+.desc_tab_btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background: var(--primary);
+  border-radius: var(--radius-full);
+}
+
+.tab_count_badge {
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.tab_panel {
+  background: #ffffff;
+  padding: 36px 32px;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  border-top: none;
+}
+
+.tab_panel h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+.tab_panel p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.desc_highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  background: var(--bg-muted);
+  padding: 20px;
+  border-radius: var(--radius-md);
+}
+
+.highlight_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.highlight_icon {
+  color: var(--emerald);
+  flex-shrink: 0;
+}
+
+/* Specs Table */
+.specs_table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.spec_row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 14px;
+}
+
+.spec_row:nth-child(odd) {
+  background: var(--bg-muted);
+}
+
+.spec_row:last-child {
+  border-bottom: none;
+}
+
+.spec_label {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.spec_val {
+  color: var(--text-secondary);
+}
+
+/* Reviews Summary */
+.reviews_summary_banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-light);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  padding: 24px 32px;
+  border-radius: var(--radius-md);
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.rating_score_col {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.score_big {
+  font-family: var(--font-heading);
+  font-size: 44px;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.score_badge_col {
+  font-size: 15px;
+  color: var(--text-main);
+}
+
+.score_badge_col strong {
+  color: var(--primary);
+}
+
+/* Reviews Cards */
+.reviews_list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review_card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.review_card_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.review_author_info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.author_name {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 15px;
+}
+
+.verified_buyer_tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.review_date {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.review_stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+
+.review_headline {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.review_body {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}

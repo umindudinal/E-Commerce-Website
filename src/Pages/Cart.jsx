@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import CartItems from "../Components/CartItems/CartItems";
+import Footer from "../Components/Footer/Footer";
 
 const Cart = () => {
-   return (
-      <>
-         
-      </>
-   )
-}
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
-export default Cart
+  return (
+    <div className="cart_page_layout">
+      <CartItems />
+      <Footer />
+    </div>
+  );
+};
+
+export default Cart;

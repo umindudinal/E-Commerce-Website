@@ -1,18 +1,49 @@
-import React from 'react'
-import './Breadcrums.css'
-import arrow_icon from '../Assets/arrow.png'
-import Footer from '../Footer/Footer'
+import React from "react";
+import "./Breadcrums.css";
+import { Link } from "react-router-dom";
+import { ChevronRight, Home } from "lucide-react";
 
-const Breadcrums = (props) => {
-   const {product} = props;
-   return (
-   <>
-   <div className="breadcrums">
-      home <img src={arrow_icon} alt="" /> shop<img src={arrow_icon} alt="" />{product.category} <img src={arrow_icon} alt="" />{product.name}
-   </div>
-   <Footer/>
-   </>
-   )
-}
+const Breadcrums = ({ product }) => {
+  if (!product) {
+    return (
+      <nav className="breadcrums_container" aria-label="Breadcrumb">
+        <div className="breadcrums_inner">
+          <Link to="/" className="breadcrum_link">
+            <Home size={15} /> <span>Home</span>
+          </Link>
+          <ChevronRight size={14} className="breadcrum_sep" />
+          <Link to="/" className="breadcrum_link">
+            Shop
+          </Link>
+        </div>
+      </nav>
+    );
+  }
 
-export default Breadcrums
+  const categoryPath =
+    product.category === "women"
+      ? "/women"
+      : product.category === "men"
+      ? "/men"
+      : "/kids";
+
+  return (
+    <nav className="breadcrums_container" aria-label="Breadcrumb">
+      <div className="breadcrums_inner">
+        <Link to="/" className="breadcrum_link">
+          <Home size={15} /> <span>Home</span>
+        </Link>
+        <ChevronRight size={14} className="breadcrum_sep" />
+        <Link to={categoryPath} className="breadcrum_link capitalize">
+          {product.category}
+        </Link>
+        <ChevronRight size={14} className="breadcrum_sep" />
+        <span className="breadcrum_current" title={product.name}>
+          {product.name}
+        </span>
+      </div>
+    </nav>
+  );
+};
+
+export default Breadcrums;
